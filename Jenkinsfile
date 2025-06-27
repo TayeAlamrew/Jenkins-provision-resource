@@ -18,6 +18,7 @@ pipeline {
 
         stage('Terraform Plan') {
             steps {
+                input message: "Approve to apply changes?"
                 sh 'terraform plan' 
             }
         }
